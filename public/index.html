@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <h2>Online Users</h2>
+            <ul id="users-list"></ul>
+        </div>
+        <div class="main-chat">
+            <div id="chat-messages"></div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+            <!-- Transcription Toggle Button -->
+            <button id="transcription-toggle" class="transcription-btn">Start Transcription</button>
+        </div>
+    </div>
+
+    <div id="username-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter your username</h2>
+            <form id="username-form">
+                <input type="text" id="username-input" placeholder="Username" required>
+                <button type="submit">Join Chat</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
